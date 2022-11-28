@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     }
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 2f);
+        Invoke(nameof(SetRandomTrajectory), 1.5f);
     }
     private void SetRandomTrajectory()
     {
