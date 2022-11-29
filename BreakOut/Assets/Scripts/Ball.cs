@@ -10,7 +10,14 @@ public class Ball : MonoBehaviour
     }
     private void Start()
     {
-        Invoke(nameof(SetRandomTrajectory), 1.5f);
+        ResetBall();
+    }
+    public void ResetBall()
+    {
+        this.transform.position = Vector2.zero;
+        this.rigidbody.velocity = Vector2.zero;
+
+        Invoke(nameof(SetRandomTrajectory), 1.25f);
     }
     private void SetRandomTrajectory()
     {
