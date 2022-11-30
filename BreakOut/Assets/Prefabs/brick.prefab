@@ -131,3 +131,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 732bcc2c3810b0e46a9cba95eda6021d, type: 3}
   - {fileID: 21300000, guid: 473cfe494dc1c4d4d80f0ea59f3affcc, type: 3}
   unbreakable: 0
+  points: 100

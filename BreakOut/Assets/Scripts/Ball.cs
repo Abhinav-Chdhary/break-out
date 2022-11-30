@@ -4,6 +4,7 @@ public class Ball : MonoBehaviour
 {
     public new Rigidbody2D rigidbody { get; private set; }
     public float speed = 500f;
+    public AudioSource HitSound { get; private set; }
     private void Awake()
     {
         this.rigidbody= GetComponent<Rigidbody2D>();
@@ -11,13 +12,14 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         ResetBall();
+        HitSound = GetComponent<AudioSource>();
     }
     public void ResetBall()
     {
         this.transform.position = Vector2.zero;
         this.rigidbody.velocity = Vector2.zero;
 
-        Invoke(nameof(SetRandomTrajectory), 1.25f);
+        Invoke(nameof(SetRandomTrajectory), 1.5f);
     }
     private void SetRandomTrajectory()
     {
@@ -26,5 +28,10 @@ public class Ball : MonoBehaviour
         force.y = -1f;
         
         this.rigidbody.AddForce(force.normalized * this.speed);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "brick")
+            HitSound.Play();
     }
 }

@@ -4,7 +4,7 @@ public class Paddle : MonoBehaviour
 {
     public new Rigidbody2D rigidbody { get; private set; }
     public Vector2 direction { get; private set; }
-    public float speed = 30f;
+    public float speed = 45f;
     public float maxBounceAngle = 75f;
 
     public void Awake()

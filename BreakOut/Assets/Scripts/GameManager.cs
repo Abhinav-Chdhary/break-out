@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnLevelLoaded;
-
     }
     private void Start()
     {
