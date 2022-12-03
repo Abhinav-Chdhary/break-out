@@ -31,7 +31,8 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "brick")
+        Brick brick = collision.gameObject.GetComponent<Brick>();
+        if (collision.gameObject.name == "brick" && !brick.unbreakable)
             HitSound.Play();
     }
 }

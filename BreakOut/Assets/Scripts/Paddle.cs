@@ -6,10 +6,12 @@ public class Paddle : MonoBehaviour
     public Vector2 direction { get; private set; }
     public float speed = 45f;
     public float maxBounceAngle = 75f;
+    public AudioSource paddleHitSound { get; private set; }
 
     public void Awake()
     {
         this.rigidbody= GetComponent<Rigidbody2D>();
+        paddleHitSound = GetComponent<AudioSource>();
     }
     public void ResetPaddle()
     {
@@ -44,6 +46,7 @@ public class Paddle : MonoBehaviour
 
         if (ball != null)
         {
+            paddleHitSound.Play();
             Vector3 paddlePosition = this.transform.position;
             Vector2 contactPoint = collision.GetContact(0).point;
 
@@ -58,5 +61,4 @@ public class Paddle : MonoBehaviour
             ball.rigidbody.velocity = rotation * Vector2.up * ball.rigidbody.velocity.magnitude;
         }
     }
-
 }
