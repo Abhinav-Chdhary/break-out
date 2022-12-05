@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -34,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         this.ball = FindObjectOfType<Ball>();
         this.paddle= FindObjectOfType<Paddle>();
+        bricks = FindObjectsOfType<Brick>();
     }
     public void Hit(Brick brick)
     {
@@ -63,9 +63,9 @@ public class GameManager : MonoBehaviour
     }
     private bool Cleared()
     {
-        for(int i=0; i<this.bricks.Length; i++)
+        for(int i=0; i<bricks.Length; i++)
         {
-            if (this.bricks[i].gameObject.activeInHierarchy && !this.bricks[i].unbreakable) 
+            if (bricks[i].gameObject.activeInHierarchy && !bricks[i].unbreakable) 
                 return false;
         }
         return true;
