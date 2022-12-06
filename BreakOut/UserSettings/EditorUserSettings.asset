@@ -5,37 +5,6 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
-    RecentlyUsedSceneGuid-0:
-      value: 5500565352570c08095b597a45215b444e4f4b73747e76317f7c1e31b0b5313d
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-<<<<<<< HEAD
-      value: 0604065f03515c020b59552312770744104e417b782d22607c7f4d65b6b9656c
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 54050553540008085c595b7442200f4415161e7c7d7076357b7a1c60b2b2626a
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 555404575d020a0a0b59552340740a4413151972297122312e7d1865e3b8323b
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 5b520d0503545b0d0c0c0a2715770748154f4d2c7d7d7e627a7d4a35b4e1646a
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 0000555757575a59095c0d2147705b44474e4e2f2a79706679704e61e6e4643c
-=======
-      value: 54050553540008085c595b7442200f4415161e7c7d7076357b7a1c60b2b2626a
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5b520d0503545b0d0c0c0a2715770748154f4d2c7d7d7e627a7d4a35b4e1646a
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 555404575d020a0a0b59552340740a4413151972297122312e7d1865e3b8323b
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 0604065f03515c020b59552312770744104e417b782d22607c7f4d65b6b9656c
->>>>>>> parent of 4baba06 (solved ball physics bug and added LVL3)
-      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
