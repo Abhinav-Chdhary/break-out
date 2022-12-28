@@ -16,8 +16,8 @@ public class Brick : MonoBehaviour
     {
         if(!this.unbreakable)
         {
-            this.health = this.states.Length;
-            this.spriteRenderer.sprite = this.states[this.health-1];
+            health = states.Length;
+            spriteRenderer.sprite = states[health -1];
         }
     }
     private void Hit()
