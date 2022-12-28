@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     }
     private void NewGame()
     {
-        this.score = 0;
-        this.lives = 3;
+        score = 0;
+        lives = 3;
 
         loadLevel(1);
     }
@@ -31,22 +31,22 @@ public class GameManager : MonoBehaviour
     }
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        this.ball = FindObjectOfType<Ball>();
-        this.paddle= FindObjectOfType<Paddle>();
+        ball = FindObjectOfType<Ball>();
+        paddle= FindObjectOfType<Paddle>();
         bricks = FindObjectsOfType<Brick>();
     }
     public void Hit(Brick brick)
     {
-        this.score += brick.points;
+        score += brick.points;
         if (Cleared())
         {
-            loadLevel(this.level + 1);
+            loadLevel(level + 1);
         }
     }
     private void ResetLevel()
     {
-        this.paddle.ResetPaddle();
-        this.ball.ResetBall();
+        paddle.ResetPaddle();
+        ball.ResetBall();
     }
     private void GameOver()
     {
@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
     }
     public void HitBottom()
     {
-        this.lives--;
-        if (this.lives > 0)
+        lives--;
+        if (lives > 0)
             ResetLevel();
         else
             GameOver();
