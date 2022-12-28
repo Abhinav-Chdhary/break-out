@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: states.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6808436985755817404, guid: db04a68449e71d74e9e4ee8f278baec0, type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1718bfcbe8e3d5e47b23d5ae8cc238f1, type: 3}
     - target: {fileID: 6811272412611092076, guid: db04a68449e71d74e9e4ee8f278baec0, type: 3}
       propertyPath: m_RootOrder
       value: 0
