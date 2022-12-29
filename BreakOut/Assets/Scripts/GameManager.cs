@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
     public Ball ball { get; private set; }
     public Paddle paddle { get; private set; }
     public Brick[] bricks { get; private set; }
+    //UI elements
     public Text scoreText;
     public Text liveNumber;
+    public Button playButton;
+    public Button pauseButton;
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -24,10 +27,23 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         lives = 3;
+        Time.timeScale = 0; //game paused by default
         scoreText.text = score.ToString();
         liveNumber.text = lives.ToString();
+        Button play = playButton.GetComponent<Button>();
+        play.onClick.AddListener(startPlaying);
+        Button pause = pauseButton.GetComponent<Button>();
+        pause.onClick.AddListener(stopPlaying);
 
         loadLevel(1);
+    }
+    private void startPlaying()
+    {
+        Time.timeScale = 1;
+    }
+    private void stopPlaying()
+    {
+        Time.timeScale = 0;
     }
     private void loadLevel(int level)
     {

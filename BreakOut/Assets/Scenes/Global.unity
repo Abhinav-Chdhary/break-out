@@ -333,6 +333,8 @@ MonoBehaviour:
   lives: 3
   scoreText: {fileID: 250300900}
   liveNumber: {fileID: 1903810862}
+  playButton: {fileID: 923716905}
+  pauseButton: {fileID: 1926326305}
 --- !u!1 &880261631
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +544,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.1764706}
     m_HighlightedColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
     m_PressedColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
     m_SelectedColor: {r: 0.0754717, g: 0.07155571, b: 0.07155571, a: 1}
@@ -929,7 +931,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.1764706}
     m_HighlightedColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
     m_PressedColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
     m_SelectedColor: {r: 0.0754717, g: 0.07155571, b: 0.07155571, a: 1}

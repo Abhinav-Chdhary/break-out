@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
         this.transform.position = Vector2.zero;
         this.rigidbody.velocity = Vector2.zero;
 
-        Invoke(nameof(SetRandomTrajectory), 1.5f);
+        Invoke(nameof(SetRandomTrajectory), 1.0f);//delays start by 1 sec
     }
     private void SetRandomTrajectory()
     {
