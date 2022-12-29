@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class GameManager : MonoBehaviour
     public Ball ball { get; private set; }
     public Paddle paddle { get; private set; }
     public Brick[] bricks { get; private set; }
+    //private AssetBundle myLoadedScenes;
+    //private string[] scenePath;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -50,7 +53,7 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        //SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver");
         NewGame();
     }
     public void HitBottom()
