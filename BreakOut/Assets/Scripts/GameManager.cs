@@ -8,12 +8,13 @@ public class GameManager : MonoBehaviour
     public Ball ball { get; private set; }
     public Paddle paddle { get; private set; }
     public Brick[] bricks { get; private set; }
-    //private AssetBundle myLoadedScenes;
-    //private string[] scenePath;
+    public Text scoreText;
+    public Text liveNumber;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.gameObject);
         SceneManager.sceneLoaded += OnLevelLoaded;
+        scoreText.text = score.ToString();
     }
     private void Start()
     {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         lives = 3;
+        scoreText.text = score.ToString();
+        liveNumber.text = lives.ToString();
 
         loadLevel(1);
     }
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
         {
             loadLevel(level + 1);
         }
+        //update score
+        scoreText.text = score.ToString();
     }
     private void ResetLevel()
     {
@@ -53,12 +58,13 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        //SceneManager.LoadScene("GameOver");
         NewGame();
     }
     public void HitBottom()
     {
         lives--;
+        liveNumber.text = lives.ToString();
         if (lives > 0)
             ResetLevel();
         else
