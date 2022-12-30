@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        Button play = playButton.GetComponent<Button>();
+        play.onClick.AddListener(startPlaying);
+        Button pause = pauseButton.GetComponent<Button>();
+        pause.onClick.AddListener(stopPlaying);
         NewGame();
     }
     private void NewGame()
@@ -30,10 +34,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0; //game paused by default
         scoreText.text = score.ToString();
         liveNumber.text = lives.ToString();
-        Button play = playButton.GetComponent<Button>();
-        play.onClick.AddListener(startPlaying);
-        Button pause = pauseButton.GetComponent<Button>();
-        pause.onClick.AddListener(stopPlaying);
 
         loadLevel(1);
     }
