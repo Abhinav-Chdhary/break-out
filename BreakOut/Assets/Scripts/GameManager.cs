@@ -74,7 +74,6 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        //SceneManager.LoadScene("GameOver");
         NewGame();
     }
     public void HitBottom()
